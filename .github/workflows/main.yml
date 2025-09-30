@@ -9,6 +9,15 @@ jobs:
     steps: 
       - name: print welcome msg
         run: echo "welcome to githab actions and CI/CD "
+
+  next-job:
+     runs-on: windows
+     needs: example-job
+     steps:
+       - name: pull/checkout code from githab
+         uses: actions/checkout@v5.0.0
+       - name: print hostname
+         run: hostname
       
         
     
