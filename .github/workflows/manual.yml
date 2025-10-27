@@ -3,13 +3,13 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-      description: select environment
-      type: choice
-      required: true
-      options:
-        - statging
-        - production
-      default: "statging"
+        description: select environment
+        type: choice
+        required: true
+        options:
+         - statging
+         - production
+        default: "statging"
 jobs:
  example-job:
    runs-on: ubuntu-latest
