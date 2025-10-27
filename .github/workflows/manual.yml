@@ -1,0 +1,19 @@
+name: manual workflow
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+      description: select environment
+      type: choice
+      required: true
+      options:
+        - statging
+        - production
+      default: "statging"
+jobs:
+ example-job:
+   runs-on: ubuntu-latest
+   steps:
+     - name: delpoying app
+       run:  echo "now we deploy our app to ${{inputs.environment}}" 
+      
